@@ -5,10 +5,10 @@ metadata:
   namespace: default
 spec:
   ports:
-  - nodePort: 30992
-    port: 8081
+   - nodePort: 30994
+    port: 9006
     protocol: TCP
-    targetPort: 8080
+    targetPort: 9005
   selector:
-    name: pet
+    name: ${APP_NAME}
   type: NodePort
