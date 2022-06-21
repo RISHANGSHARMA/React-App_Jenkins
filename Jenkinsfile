@@ -27,12 +27,6 @@ pipeline {
            }
         }
       
-
-        stage('Unit Test ') {
-            steps{
-               sh "npm run cover"
-            }
-        }
         stage('Dependency check'){
             steps{
              dependencyCheck odcInstallation: 'OWASP',additionalArguments: '-n --format HTML --format XML'
