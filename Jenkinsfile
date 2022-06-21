@@ -30,7 +30,7 @@ pipeline {
 
         stage('Unit Test ') {
             steps{
-                npm 'run cover'
+               sh "npm run cover"
             }
         }
         stage('Dependency check'){
