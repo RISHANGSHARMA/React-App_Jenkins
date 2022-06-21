@@ -27,11 +27,6 @@ pipeline {
            }
         }
       
-        stage('Dependency install') {
-            steps{
-                npm 'install'
-            }
-        }
 
         stage('Unit Test ') {
             steps{
