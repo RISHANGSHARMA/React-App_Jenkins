@@ -6,7 +6,7 @@ metadata:
 spec:
   ports:
    - nodePort: 30994
-    port: 9006
+    port: 9011
     protocol: TCP
     targetPort: 9010
   selector:
