@@ -22,11 +22,11 @@ pipeline {
             //    }
            // }
         //}
-        stage("Quality and Security Gate") {
-            steps {
-                stepQualityGate()
-              }
-        }
+//         stage("Quality and Security Gate") {
+//             steps {
+//                 stepQualityGate()
+//               }
+//         }
         stage("Docker Build"){
             environment {
              registryCredential = 'artifactoryCredential'
