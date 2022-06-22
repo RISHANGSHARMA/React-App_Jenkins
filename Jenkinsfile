@@ -10,12 +10,12 @@ pipeline {
      stages {
         stage("Build") {
             steps {
-                dir("frontend"){
+                
 
 
                 sh "npm install"
                 sh "yarn build"
-                }
+                
             }
         }
 // 		 stage('Software Composition Analysis'){

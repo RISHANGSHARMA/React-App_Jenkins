@@ -1,58 +1,70 @@
-# Note Zipper
-<table>
-<tr>
-<td>
-  Note Zipper provides you one safe place for all your notes.
-</td>
-</tr>
-</table>
+# Getting Started with Create React App
 
-# ![Note Zipper](https://github.com/Piyush55dude/notezipper/blob/master/images/landing.png)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## [Click Here to Watch Full tutorial on Youtube](https://www.youtube.com/watch?v=IQXjO0t4XRM&list=PLKhlp2qtUcSYC7EffnHzD-Ws2xG-j3aYo)
-![MERN 1](https://user-images.githubusercontent.com/51760520/124705210-ea67ab00-df12-11eb-88cd-e9060c2942b9.png)
+## Available Scripts
 
-## Demo
-Here is a working live demo :  https://notezipper.herokuapp.com/
+In the project directory, you can run:
 
-## Site
+### `yarn start`
 
-### Landing Page
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-![](https://github.com/Piyush55dude/notezipper/blob/master/images/landing.png)
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-### Login Form
-You can register a new account or login with an existing one.
+### `yarn test`
 
-![](https://github.com/Piyush55dude/notezipper/blob/master/images/login.png)
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### Edit Profile
+### `yarn build`
 
-![](https://github.com/Piyush55dude/notezipper/blob/master/images/profile.png)
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-### Create a Note
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-![](https://github.com/Piyush55dude/notezipper/blob/master/images/create.png)
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### All Notes
+### `yarn eject`
 
-![](https://github.com/Piyush55dude/notezipper/blob/master/images/allnotes.png)
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-### Edit Note
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-![](https://github.com/Piyush55dude/notezipper/blob/master/images/edit.png)
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-## Built with 
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-- [React JS](https://reactjs.org/)
-- [Node JS](https://nodejs.org/) 
-- [Express JS](https://expressjs.com/)
-- [Mongo DB](https://www.mongodb.com/)
-- [Bootstrap](http://getbootstrap.com/)
+## Learn More
 
-## Team
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-[![Piyush Agarwal](https://avatars1.githubusercontent.com/u/51760520?v=3&s=144)](https://github.com/piyush-eon)
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-MIT © [Piyush Agarwal ](https://github.com/piyush-eon)
+### Code Splitting
 
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `yarn build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
