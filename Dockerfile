@@ -1,8 +1,20 @@
-FROM node
+# pull official base image
+FROM node:13.12.0-alpine
+
+# set working directory
 WORKDIR /app
-COPY ./*.tgz /app
-RUN tar -xf *.tgz; ls -lrt
-WORKDIR /app/package
-RUN npm install 
-EXPOSE 9005
-CMD ["node","backend/server.js"]
+
+# add `/app/node_modules/.bin` to $PATH
+ENV PATH /app/node_modules/.bin:$PATH
+
+# install app dependencies
+COPY package.json ./
+COPY package-lock.json ./
+RUN npm install --silent
+RUN npm install react-scripts@3.4.1 -g --silent
+
+# add app
+COPY . ./
+
+# start app
+CMD ["yarn", "start"]
