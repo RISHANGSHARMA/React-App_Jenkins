@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ${APP_NAME}
+spec:
+ replicas: 1
+ selector:
+   matchLabels:
+       name: ${APP_NAME}
+ template:
+   metadata:
+     name: ${APP_NAME}-pod
+     labels:
+       name: ${APP_NAME}
+   spec:
+      containers:
+         - name: ${APP_NAME}-pod
+           image: ${IMAGE_NAME}:${BUILD_NUMBER}
