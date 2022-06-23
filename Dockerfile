@@ -22,8 +22,5 @@
 # # start app
 # CMD ["yarn", "start"]
 
-
-FROM nginx:stable-alpine
-COPY --from=build /app/build /usr/share/nginx/html
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+FROM nginx:1.17.1-alpine
+COPY /build /usr/share/nginx/html
