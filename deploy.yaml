@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ${APP_NAME}
+  name: react_app
 spec:
  replicas: 1
  selector:
    matchLabels:
-       name: ${APP_NAME}
+       name: react_app
  template:
    metadata:
-     name: ${APP_NAME}-pod
+     name: react_app-pod
      labels:
-       name: ${APP_NAME}
+       name: react_app
    spec:
       containers:
-         - name: ${APP_NAME}-pod
-           image: ${IMAGE_NAME}:${BUILD_NUMBER}
+         - name: react_app-pod
+           image: 10.83.0.202:9082/docker-hub-virtual/canadalabs/reactapp:${BUILD_NUMBER}
