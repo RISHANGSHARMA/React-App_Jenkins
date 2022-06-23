@@ -5,7 +5,7 @@ def SONAR_PROJECT="${env.JOB_NAME}".split("/")[-2]
 pipeline {
         agent any
     tools{
-       nodejs '17.8.0'
+       nodejs '14.18.1'
     }
      stages {
         stage("Build") {
