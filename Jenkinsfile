@@ -64,11 +64,11 @@ pipeline {
         }
         stage("Kubernetes Service Deploy"){
             environment {
-                 APP_NAME = "${APP}"
-                 IMAGE_NAME = "${IMAGE}"
+                 APP_NAME = "react_app"
+                 IMAGE_NAME = "10.83.0.202:9082/docker-hub-virtual/canadalabs/reactapp"
             }
             steps{
-                 stepKubeServiceDeploy(APP)
+                 stepKubeServiceDeploy("react_app")
             }
         }
         }
