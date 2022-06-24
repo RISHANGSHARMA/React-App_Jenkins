@@ -18,42 +18,42 @@ pipeline {
                 
             }
         }
-// 		 stage('Software Composition Analysis'){
-//             steps{
-//                 stepSCA()
-//             }
-//         }
-//         stage('SonarQube Static Analysis'){
-//            steps {
-//                withSonarQubeEnv('Sonarqube_8') {
-//                    sh "${tool('sonar')}/bin/sonar-scanner -Dsonar.projectKey=${SONAR_PROJECT} -Dsonar.projectName=${SONAR_PROJECT} -Dsonar.sources=$WORKSPACE -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info -Dsonar.dependencyCheck.htmlReportPath=./dependency-check-report.html"
-//                }
-//            }
-//         }
+		 stage('Software Composition Analysis'){
+            steps{
+                stepSCA()
+            }
+        }
+        stage('SonarQube Static Analysis'){
+           steps {
+               withSonarQubeEnv('Sonarqube_8') {
+                   sh "${tool('sonar')}/bin/sonar-scanner -Dsonar.projectKey=${SONAR_PROJECT} -Dsonar.projectName=${SONAR_PROJECT} -Dsonar.sources=$WORKSPACE -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info -Dsonar.dependencyCheck.htmlReportPath=./dependency-check-report.html"
+               }
+           }
+        }
       
-//         stage('Dependency check'){
-//             steps{
-//              dependencyCheck odcInstallation: 'OWASP',additionalArguments: '-n --format HTML --format XML'
-// 			}
-//         }
+        stage('Dependency check'){
+            steps{
+             dependencyCheck odcInstallation: 'OWASP',additionalArguments: '-n --format HTML --format XML'
+			}
+        }
         
-//         stage('Security Gate'){
-// 			steps{   
-// 				dependencyCheckPublisher pattern: ''
+        stage('Security Gate'){
+			steps{   
+				dependencyCheckPublisher pattern: ''
 				
-// 			} 
-//         }
-//         stage('SonarQube Analysis'){
-//            steps {
-//               withSonarQubeEnv('Sonarqube_8') {
-//                 sh "${tool("sonar")}/bin/sonar-scanner \
-//   -Dsonar.projectKey=JavaScript -Dsonar.projectBaseDir=$WORKSPACE \
-//   -Dsonar.sources=$WORKSPACE -Dsonar.javascript.lcov.reportPaths=reports/coverage/lcov.info -Dsonar.dependencyCheck.htmlReportPath=$WORKSPACE/dependency-check-report.html "
-//               }
-//             }
+			} 
+        }
+        stage('SonarQube Analysis'){
+           steps {
+              withSonarQubeEnv('Sonarqube_8') {
+                sh "${tool("sonar")}/bin/sonar-scanner \
+  -Dsonar.projectKey=JavaScript -Dsonar.projectBaseDir=$WORKSPACE \
+  -Dsonar.sources=$WORKSPACE -Dsonar.javascript.lcov.reportPaths=reports/coverage/lcov.info -Dsonar.dependencyCheck.htmlReportPath=$WORKSPACE/dependency-check-report.html "
+              }
+            }
            
            
-//         }
+        }
         stage("Docker Build"){
             environment {
              registryCredential = 'artifactoryCredential'
