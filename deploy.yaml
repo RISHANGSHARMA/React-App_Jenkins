@@ -15,4 +15,4 @@ spec:
    spec:
       containers:
          - name: react_app-pod
-           image: 10.83.0.202:9082/docker-hub-virtual/canadalabs/reactapp:${BUILD_NUMBER}
+           image: ${IMAGE_NAME}:${BUILD_NUMBER}

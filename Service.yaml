@@ -6,9 +6,9 @@ metadata:
 spec:
   ports:
   - nodePort: 31000
-    port: 80
+    port: 90
     protocol: TCP
-    targetPort: 9112
+    targetPort: 80
   selector:
     name: ${APP_NAME}
   type: NodePort
