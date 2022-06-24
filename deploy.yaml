@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: react_app
+  name: ${APP_NAME}
 spec:
  replicas: 1
  selector:
    matchLabels:
-       name: react_app
+       name: ${APP_NAME}
  template:
    metadata:
-     name: react_app-pod
+     name: ${APP_NAME}-pod
      labels:
-       name: react_app
+       name: ${APP_NAME}
    spec:
       containers:
-         - name: react_app-pod
+         - name: ${APP_NAME}-pod
            image: ${IMAGE_NAME}:${BUILD_NUMBER}

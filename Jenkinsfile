@@ -1,5 +1,5 @@
 def SONAR_PROJECT="${env.JOB_NAME}".split("/")[-2]
-  def APP = "react_app"
+  def APP = "react-app"
   def IMAGE = "10.83.0.202:9082/docker-hub-virtual/canadalabs/reactapp"
 
 pipeline {
